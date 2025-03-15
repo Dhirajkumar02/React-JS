@@ -3,23 +3,18 @@
 
 <head>
 
-    <title>React JS Example6</title>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>React JS Example7</title>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 
 <body>
     <div id="root"></div>
     <script>
         function MyApp() {
-            let myHeading = React.createElement('h1', null, 'React Rocks!');
-            return myHeading;
+            return React.createElement('h1', null, 'React Rocks!');
         }
-        let root = document.querySelector('#root');
-
-        // Don't use this approach
-        let element = MyApp();
-        ReactDOM.render(element, root);
+        ReactDOM.render(React.createElement(MyApp), document.querySelector('#root'));
     </script>
 </body>
 
