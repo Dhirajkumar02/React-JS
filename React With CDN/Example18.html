@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React JS Example18</title>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        function MyApp() {
+            let myHeading = React.createElement('h1', null, 'Contact List');
+            let myUl = React.createElement('ul', null,
+                React.createElement('li', { style: { color: 'green' } }, 'Dhiraj Kumar',
+                    React.createElement('br'),
+                    React.createElement('a', { href: 'mailto:dhirajkumar62413@gmail.com', style: { color: 'blue', textDecoration: 'underline' } }, 'dhirajkumar62413@gmail.com')),
+                React.createElement('li', { style: { color: 'crimson' } }, 'Niraj Kumar',
+                    React.createElement('br'),
+                    React.createElement('a', { href: 'mailto:nirajkumar123@gmail.com', style: { color: 'blue', textDecoration: 'underline' } }, 'nirajkumar123@gmail.com')),
+                React.createElement('li', { style: { color: 'yellow' } }, 'Gyan Prakash',
+                    React.createElement('br'),
+                    React.createElement('a', { href: 'mailto:gyanprakash6205@gmail.com', style: { color: 'blue', textDecoration: 'underline' } }, 'gyanprakash6205@gmail.com'))
+            );
+            let myDiv = React.createElement('div', null, myHeading, myUl);
+            return myDiv;
+        }
+
+        // Correct way to use React 18
+        let root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(MyApp));
+    </script>
+</body>
+
+</html>

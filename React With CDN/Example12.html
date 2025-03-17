@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React JS Example12</title>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        function MyApp() {
+            let myPara = React.createElement('p', null, 'React is a component based JS library.');
+            let myDiv = React.createElement('div', null, 'React Is Love!!', myPara);
+            return myDiv;
+        }
+
+        // Correct way to use React 18
+        let root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(MyApp));
+    </script>
+</body>
+
+</html>
